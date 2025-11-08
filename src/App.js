@@ -1,6 +1,7 @@
 import './App.css';
 import './styles.css';
-import Header from './components/header';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -8,13 +9,7 @@ function App() {
       <div className='container'>
         <Header />
       </div>
-
-      <header className="header">
-        <h1>Welcome to Movie Dux</h1>
-      </header>
-      <footer className="footer">
-        <p className="footer">Footer Content</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
