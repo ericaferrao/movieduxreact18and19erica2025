@@ -5,7 +5,7 @@ import MovieCard from "./MovieCard";
 export default function MoviesGrid() {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const [genre, setGenre] = useState("All Genre");
+    const [genre, setGenre] = useState("All Genres");
     const [rating, setRating] = useState("All");
 
     useEffect(() => {
@@ -33,13 +33,14 @@ export default function MoviesGrid() {
             case "Good":
                 return movie.rating >= 8;
             case "Ok":
-                return movie.rating >= 5 && movie.rating < 8;
+                return movie.rating > 5 && movie.rating < 8;
             case "Bad":
-                return movie.rating < 5;
+                return movie.rating <= 5;
             default:
                 return false;
 
         }
+
     }
 
     const matchGenre = (movie, genre) => {
@@ -53,7 +54,10 @@ export default function MoviesGrid() {
     }
 
     const filteredMovies = movies.filter((movie) =>
-        matchGenre(movie, genre) && matchSearchTerm(movie, searchTerm) && matchRating(movie, rating))
+        matchGenre(movie, genre) &&
+        matchSearchTerm(movie, searchTerm) &&
+        matchRating(movie, rating)
+    )
 
     return (
         <>
