@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+# Movie Dux
+
+Movie Dux is a responsive React web application for browsing and managing a local movie catalog. The app reads movie data from a bundled JSON file and provides an approachable interface to search by title, filter by genre and rating, and maintain a personal watchlist.
+
+Key Features:
+- Search: Quickly locate movies by title with immediate results.
+- Filters: Refine results by genre and minimum rating.
+- Watchlist: Add and remove movies from a personal watchlist (client-side state).
+- Routing: Smooth multi-page navigation using React Router DOM.
+- Responsive UI: Mobile-friendly layout and accessible components.
+
+Tech Stack:
+- React (functional components & hooks)
+- JavaScript (ES6+)
+- React Router DOM
+- HTML5 & CSS3
+
+Development / Quick Start
+
+The sections below (scripts and build instructions) are the standard Create React App commands used to run and build the project.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
